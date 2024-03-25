@@ -14,17 +14,26 @@ const Menu = ({ activeStatus, setActive }) => {
       <nav className="menu__burger__body" onClick={(e) => e.stopPropagation()}>
         <ul className="menu__burger__list">
           <li className="menu__burger__item">
-            <a href="/" className="menu__burger__link">
+            <a
+              href="/more-than-just-shorter-links-for-deploy/"
+              className="menu__burger__link"
+            >
               Features
             </a>
           </li>
           <li className="menu__burger__item">
-            <a href="/" className="menu__burger__link">
+            <a
+              href="/more-than-just-shorter-links-for-deploy/"
+              className="menu__burger__link"
+            >
               Pricing
             </a>
           </li>
           <li className="menu__burger__item">
-            <a href="/" className="menu__burger__link">
+            <a
+              href="/more-than-just-shorter-links-for-deploy/"
+              className="menu__burger__link"
+            >
               Resources
             </a>
           </li>
@@ -32,12 +41,18 @@ const Menu = ({ activeStatus, setActive }) => {
         <div className="horizontal__line"></div>
         <ul className="menu__burger__auhtorization burger__auhtorization">
           <li className="menu__burger__auhtorization__login login">
-            <a href="/" className="burger__login__link">
+            <a
+              href="/more-than-just-shorter-links-for-deploy/"
+              className="burger__login__link"
+            >
               Login
             </a>
           </li>
           <li className="menu__burger__auhtorization__signup signup">
-            <a href="/" className="burger__signup__link">
+            <a
+              href="/more-than-just-shorter-links-for-deploy/"
+              className="burger__signup__link"
+            >
               Sign Up
             </a>
           </li>
