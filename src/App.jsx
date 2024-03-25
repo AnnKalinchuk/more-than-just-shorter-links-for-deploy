@@ -113,7 +113,10 @@ const App = () => {
             <div className="boost__inner">
               <h2>Boost your links today</h2>
               <div className="boost__button ">
-                <a href="/" className="boost__link">
+                <a
+                  href="/more-than-just-shorter-links-for-deploy/"
+                  className="boost__link"
+                >
                   Get Started
                 </a>
               </div>
