@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="footer__container">
         <div className="footer__inner">
           <div className="footer__logo">
-            <a href="/" className="logo__link">
+            <a href="#" className="logo__link">
               <svg
                 className="logo__img"
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,51 +36,51 @@ const Footer = () => {
                 <li>
                   <ul>
                     <li>
-                      <a href="/">Features</a>
+                      <a href="#">Features</a>
                     </li>
                     <li>
-                      <a href="/">Link Shortening</a>
+                      <a href="#">Link Shortening</a>
                     </li>
                     <li>
-                      <a href="/">Branded Links</a>
+                      <a href="#">Branded Links</a>
                     </li>
                     <li>
-                      <a href="/">Analytics</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <ul>
-                    <li>
-                      <a href="/">Resources</a>
-                    </li>
-                    <li>
-                      <a href="/">Blog</a>
-                    </li>
-                    <li>
-                      <a href="/">Developers</a>
-                    </li>
-                    <li>
-                      <a href="/">Support</a>
+                      <a href="#">Analytics</a>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <ul>
                     <li>
-                      <a href="/">Company</a>
+                      <a href="#">Resources</a>
                     </li>
                     <li>
-                      <a href="/">About</a>
+                      <a href="#">Blog</a>
                     </li>
                     <li>
-                      <a href="/">Our Team</a>
+                      <a href="#">Developers</a>
                     </li>
                     <li>
-                      <a href="/">Careers</a>
+                      <a href="#">Support</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <a href="#">Company</a>
                     </li>
                     <li>
-                      <a href="/">Contact</a>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">Our Team</a>
+                    </li>
+                    <li>
+                      <a href="#">Careers</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact</a>
                     </li>
                   </ul>
                 </li>
@@ -90,7 +90,7 @@ const Footer = () => {
           <div className="footer__social">
             <ul>
               <li>
-                <a href="/">
+                <a href="#">
                   <FontAwesomeIcon
                     icon={faFacebookSquare}
                     inverse
@@ -99,12 +99,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="#">
                   <FontAwesomeIcon icon={faTwitter} inverse className="icon" />
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="#">
                   <FontAwesomeIcon
                     icon={faPinterest}
                     inverse
@@ -113,7 +113,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="#">
                   <FontAwesomeIcon
                     icon={faInstagram}
                     inverse
