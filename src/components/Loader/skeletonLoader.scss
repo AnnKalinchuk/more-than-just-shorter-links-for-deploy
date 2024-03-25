@@ -1,0 +1,62 @@
+.skeleton__container {
+  width: 276px;
+  height: 200px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media (min-width: 375px) {
+  .skeleton__container {
+    width: 326px;
+  }
+}
+
+@media (min-width: 430px) {
+  .skeleton__container {
+    width: 375px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 600px) {
+  .skeleton__container {
+    width: 520px;
+  }
+}
+
+@media (min-width: 700px) {
+  .skeleton__container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 880px) {
+  .skeleton__container {
+    width: 660px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .skeleton__container {
+    width: 860px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .skeleton__container {
+    width: 1112px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 1450px) {
+  .skeleton__container {
+    width: 1070px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .skeleton__container {
+    width: 1260px;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../styles/variables.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+  }
+
+  label {
+    position: relative;
+    width: 100%;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  input::placeholder {
+    color: $lightgreyColor;
+  }
+
+  .error::placeholder {
+    color: $redColor;
+  }
+
+  button {
+    border-radius: 5px;
+    border: 1px solid $buttonBackground;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: $buttonBackground;
+    padding: 14px;
+    min-width: 180px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      border-color: $buttonBackgroundHover;
+      background-color: $buttonBackgroundHover;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    color: $redColor;
+    margin-top: 5px;
+    font-size: 16px;
+    font-style: italic;
+  }
+}
+
+@media (min-width: 700px) {
+  .form {
+    display: flex;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form {
+    display: flex;
+    &__body {
+      display: flex;
+      flex-direction: row;
+
+      gap: 30px;
+    }
+
+    input {
+      flex: 4;
+      padding: 20px 35px;
+      font-size: 22px;
+    }
+
+    button {
+      flex: 1;
+      font-size: 22px;
+    }
+
+    span {
+      position: absolute;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .form {
+    &__body {
+      gap: 25px;
+    }
+
+    input {
+      border-radius: 10px;
+    }
+
+    button {
+      min-width: 190px;
+      border-radius: 10px;
+    }
+  }
+}

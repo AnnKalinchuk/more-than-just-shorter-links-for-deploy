@@ -1,0 +1,85 @@
+@import "../../../styles/variables.scss";
+
+.card__link {
+  background-color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px 0;
+  border-radius: 5px;
+
+  flex-wrap: wrap;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  .added__link {
+    padding: 14px;
+    font-weight: 500;
+  }
+  .horizontal__line {
+    height: 1px;
+    width: 100%;
+    background: $darkgreyColor;
+    transform: scaleY(0.4);
+  }
+
+  .shortered__link {
+    color: $buttonBackground;
+    padding: 14px;
+  }
+
+  .button__copy {
+    background-color: $buttonBackground;
+    color: $whiteColor;
+
+    border-radius: 5px;
+    border: 1px solid $buttonBackground;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+
+    margin: 0 14px 14px;
+
+    &:hover {
+      background-color: $buttonBackgroundHover;
+      border-color: $buttonBackgroundHover;
+      cursor: pointer;
+    }
+
+    &.active {
+      background-color: $background;
+      border-color: $background;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .card__link {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px 15px 30px;
+    font-size: 1.11rem;
+    gap: 20px;
+
+    .added__link {
+      flex-grow: 2;
+      padding: 0;
+    }
+
+    .horizontal__line {
+      display: none;
+    }
+
+    .shortered__link {
+      padding: 0;
+    }
+
+    .button__copy {
+      width: 100px;
+      margin: 0;
+    }
+  }
+}

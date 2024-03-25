@@ -1,0 +1,229 @@
+@import "../../styles/variables.scss";
+
+.header {
+  height: $heightHeaderMobile;
+  background-color: $whiteColor;
+  color: $darkgreyColor;
+  padding-top: 20px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    max-width: 368px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__logo {
+    img {
+      vertical-align: middle;
+    }
+
+    margin-right: 26px;
+  }
+}
+
+.menu {
+  display: none;
+
+  &__link {
+    font-size: 16px;
+    font-weight: 800;
+    color: $darkgreyColor;
+  }
+
+  &__link:hover {
+    cursor: pointer;
+    color: $darkColor;
+  }
+  &__burger__icon {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+
+    span {
+      width: 26px;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      background-color: #9d9ca4;
+      transition: all 0.3s ease-in-out;
+
+      &:nth-of-type(2) {
+        top: calc(50% - 9px);
+      }
+
+      &:nth-of-type(3) {
+        top: calc(50% + 9px);
+      }
+    }
+  }
+}
+.active-menu-icon {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  cursor: pointer;
+
+  span {
+    width: 26px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: #9d9ca4;
+    transition: all 0.3s ease-in-out;
+
+    &:first-child {
+      width: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(45deg);
+    }
+
+    &:nth-of-type(3) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(-45deg);
+    }
+  }
+}
+
+.authorization {
+  display: none;
+  justify-content: end;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  &__login {
+    cursor: pointer;
+
+    a:hover {
+      color: $darkColor;
+    }
+  }
+  &__signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 104px;
+    height: 40px;
+    background-color: $buttonBackground;
+    border-radius: 25px;
+
+    &:hover {
+      background-color: $buttonBackgroundHover;
+      cursor: pointer;
+    }
+
+    .signup__link {
+      color: $whiteColor;
+    }
+  }
+}
+
+@media (min-width: 430px) {
+  .header {
+    &__container {
+      max-width: 375px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    &__container {
+      max-width: 560px;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .header {
+    &__container {
+      max-width: 640px;
+    }
+  }
+}
+
+@media (min-width: 880px) {
+  .header {
+    height: $heightHeader;
+    &__container {
+      max-width: 700px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    &__container {
+      max-width: 900px;
+    }
+    .menu {
+      display: flex;
+      flex-grow: 1;
+
+      &__body {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        align-items: center;
+      }
+
+      &__burger__icon {
+        display: none;
+      }
+
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+      }
+    }
+    .authorization {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    &__container {
+      max-width: 1152px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .header {
+    &__container {
+      max-width: 1300px;
+    }
+  }
+}

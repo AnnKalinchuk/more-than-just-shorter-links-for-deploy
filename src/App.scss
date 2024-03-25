@@ -1,0 +1,589 @@
+@import "./styles/variables.scss";
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+@import "@fortawesome/fontawesome-free/scss/regular.scss";
+
+.app__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 auto;
+  margin-top: calc($heightHeaderMobile);
+}
+
+.feature {
+  background-color: $whiteColor;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__content {
+    flex: 0 0 100%;
+    display: flex;
+  }
+
+  &__container {
+    max-width: 326px;
+    padding: 0 6px;
+    margin: 0 auto;
+    background-color: $whiteColor;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image img {
+    width: 135%;
+    padding-bottom: -15px;
+    margin-left: 22px -9px;
+    margin: 8px 20px;
+  }
+
+  &__body {
+    padding: 20px 0px 55px 0px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 0px 0px 11px 0px;
+    color: $mainColor;
+  }
+
+  &__description {
+    line-height: 1.6;
+    font-weight: 500;
+    color: $darkgreyColor;
+  }
+
+  &__button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    width: 196px;
+    color: $whiteColor;
+    height: 59px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: $buttonBackground;
+    padding: 14px;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: $buttonBackgroundHover;
+    }
+  }
+}
+
+.statistics {
+  background-color: $lightgreyBackgroundColor;
+  padding-bottom: 46px;
+
+  &__inner {
+    padding-top: 70px;
+  }
+
+  .text-info {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 97px;
+
+    h2 {
+      font-size: 1.44rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    p {
+      color: $darkgreyColor;
+      font-weight: 500;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+
+  .cards__info {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    position: relative;
+    margin-bottom: 30px;
+
+    .horizontal__line__center {
+      position: absolute;
+      background-color: $buttonBackground;
+      width: 8px;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50%);
+    }
+
+    .card__info {
+      text-align: center;
+      background-color: $whiteColor;
+      position: relative;
+      border-radius: 5px;
+      padding: 0 33px 40px 33px;
+
+      flex: 1;
+    }
+
+    .card__icon {
+      border-radius: 50%;
+      background-color: $background;
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .card__title {
+      padding-top: 78px;
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .card__text {
+      font-size: 0.83rem;
+      font-weight: 500;
+      line-height: 1.7;
+      color: $darkgreyColor;
+    }
+  }
+}
+
+.statistics__container {
+  position: relative;
+
+  max-width: 326px;
+  margin: 0 auto;
+
+  margin-top: 90px;
+}
+
+.shorter__link__wrapper {
+  background-color: $background;
+
+  background-image: url("./assets/images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+
+  background-position: right top;
+  background-size: 75%;
+
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: calc(#{-$heightSearchBlockMobile} / 2);
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  padding: 25px 25px;
+}
+.shorter__link__inner {
+  width: 100%;
+}
+
+.boost {
+  background-color: $background;
+  background-image: url("./assets/images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+
+  background-position: right;
+  background-size: cover;
+
+  height: 300px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__inner {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $whiteColor;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    width: 196px;
+    color: $whiteColor;
+    height: 56px;
+    font-size: 1.11rem;
+    font-weight: 700;
+    background-color: $buttonBackground;
+    padding: 12px;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: $buttonBackgroundHover;
+    }
+  }
+}
+
+@media (min-width: 430px) {
+  .feature__container {
+    max-width: 375px;
+  }
+
+  .feature__description {
+    font-size: 1.22rem;
+  }
+
+  .statistics {
+    &__container {
+      max-width: 375px;
+      padding: 0 22px;
+    }
+
+    .shorter__link__wrapper {
+      width: calc(100% - 44px);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .feature {
+    &__container {
+      max-width: 560px;
+    }
+  }
+  .statistics {
+    &__container {
+      max-width: 560px;
+    }
+
+    .text-info {
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 19px;
+        max-width: 520px;
+      }
+    }
+  }
+
+  .boost {
+    &__inner {
+      h2 {
+        font-size: 2.1111rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .feature {
+    display: flex;
+    flex-direction: row;
+
+    &__container {
+      max-width: 640px;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    &__body {
+      width: 60%;
+      padding: 50px 20px 50px 0px;
+      text-align: left;
+    }
+
+    &__title {
+      margin: 0px 0px 20px 0px;
+    }
+
+    &__description {
+      color: $darkgreyColor;
+
+      margin-bottom: 40px;
+    }
+
+    &__button {
+      justify-content: left;
+    }
+
+    &__image {
+      flex: 0 0 52%;
+      transform: translate(-90%, 0px);
+      position: relative;
+
+      padding: 0 0 34% 0;
+    }
+
+    &__image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  .statistics {
+    &__container {
+      max-width: 640px;
+      margin-top: 60px;
+    }
+
+    .shorter__link__wrapper {
+      width: calc(100% - 44px);
+    }
+  }
+
+  .boost {
+    background-image: url("./assets/images/bg-boost-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+  }
+}
+
+@media (min-width: 880px) {
+  main {
+    margin-top: calc($heightHeader + 20px);
+  }
+  .feature {
+    &__container {
+      max-width: 700px;
+    }
+
+    &__image img {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 2.8rem;
+    }
+  }
+
+  .statistics {
+    &__container {
+      max-width: 700px;
+      margin-top: 130px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .feature {
+    &__container {
+      max-width: 900px;
+    }
+
+    &__title {
+      font-size: 3.6rem;
+    }
+  }
+
+  .statistics {
+    padding-bottom: 115px;
+
+    &__inner {
+      padding-top: 110px;
+    }
+
+    &__container {
+      max-width: 900px;
+
+      .cards__info {
+        flex-direction: row;
+        gap: 29px;
+        position: relative;
+
+        .horizontal__line__center {
+          width: 100%;
+          left: 0;
+          top: 60%;
+          height: 8px;
+          transform: translateY(-50%);
+        }
+
+        .card__info {
+          text-align: left;
+          background-color: $whiteColor;
+          position: relative;
+          border-radius: 5px;
+          padding: 0 35px 40px 35px;
+        }
+        .detailed-records {
+          transform: translateY(45px);
+        }
+
+        .fully-customizable {
+          transform: translateY(90px);
+        }
+
+        .card__icon {
+          border-radius: 50%;
+          background-color: $background;
+          width: 90px;
+          height: 90px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 10%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .shorter__link__wrapper {
+      background-image: url("./assets/images/bg-shorten-desktop.svg");
+      background-size: cover;
+      background-position: none;
+
+      padding: 50px 60px;
+      height: $heightSearchBlockDesktop;
+      top: calc(#{-$heightSearchBlockDesktop} / 2);
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .feature {
+    &__container {
+      max-width: 1152px;
+    }
+
+    &__title {
+      font-size: 4.4rem;
+    }
+
+    &__description {
+      font-size: 1.3rem;
+      width: 80%;
+    }
+
+    &__image {
+      transform: translate(-80%, 0px);
+      flex: 0 0 50%;
+    }
+
+    &__image img {
+      width: 100%;
+      top: 0;
+    }
+  }
+
+  .statistics {
+    &__container {
+      max-width: 1152px;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  main {
+    margin-top: calc($heightHeader + 40px);
+  }
+  .feature {
+    &__image {
+      transform: translate(-87%, 0px);
+    }
+
+    &__body {
+      padding: 70px 20px 60px 0px;
+    }
+
+    &__title {
+      font-size: 4.4rem;
+      letter-spacing: -2px;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    &__description {
+      font-size: 1.23rem;
+      width: 90%;
+      margin-bottom: 35px;
+      line-height: 1.5;
+    }
+  }
+
+  .statistics {
+    padding-bottom: 170px;
+    .text-info {
+      margin-bottom: 100px;
+      h2 {
+        font-size: 2.1rem;
+        line-height: 1.7;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .cards__info {
+      .card__title {
+        font-size: 1.2rem;
+      }
+      .card__text {
+        font-size: 0.8rem;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .feature {
+    &__container {
+      max-width: 1300px;
+    }
+  }
+
+  .statistics {
+    &__container {
+      max-width: 1300px;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  color: $whiteColor;
+  background-color: $backgroundColorFooter;
+
+  &__container {
+    max-width: 326px;
+    padding: 60px 10px;
+    margin: 0 auto;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo:hover {
+    color: $buttonBackground;
+  }
+
+  &__menu {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+
+    a:hover {
+      color: $buttonBackground;
+    }
+
+    .menu__body > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .menu__body > ul > li > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .menu__body > ul > li > ul > li:first-child {
+      margin-bottom: 10px;
+
+      a {
+        color: $whiteColor;
+      }
+
+      a:hover {
+        color: $buttonBackground;
+      }
+    }
+  }
+
+  &__social {
+    .icon {
+      font-size: 26px;
+    }
+    .icon:hover {
+      color: $buttonBackground;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+
+      li {
+        width: 26px;
+        height: 26px;
+
+        a:hover {
+          color: $buttonBackground;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    &__container {
+      max-width: 900px;
+      padding: 60px 22px;
+    }
+
+    &__inner {
+      flex-direction: row;
+      align-items: start;
+    }
+
+    &__menu {
+      text-align: left;
+      margin-left: 100px;
+    }
+
+    &__menu .menu__body > ul {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    &__container {
+      max-width: 1152px;
+      padding: 70px 22px;
+    }
+    &__menu {
+      margin-left: 155px;
+      font-size: 0.89rem;
+    }
+
+    &__menu .menu__body > ul {
+      gap: 80px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+}
+
+@media (min-width: 1600px) {
+  .footer {
+    &__container {
+      max-width: 1300px;
+    }
+
+    &__menu {
+      margin-left: 300px;
+    }
+  }
+}

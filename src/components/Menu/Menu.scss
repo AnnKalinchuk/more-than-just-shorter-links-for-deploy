@@ -1,0 +1,115 @@
+@import "../../styles/variables.scss";
+
+.menu__burger__wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+
+  top: $heightHeaderMobile;
+  left: 0;
+  z-index: 5;
+
+  transform: translateY(-100%);
+  transition: all 0.2s;
+
+  overflow-y: auto;
+}
+
+.menu__burger__wrapper.active-menu {
+  transform: translateY(0 - $heightHeaderMobile);
+}
+
+.menu__burger__body {
+  position: fixed;
+  min-width: 280px;
+  height: 380px;
+  top: $heightHeaderMobile;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: $background;
+  color: $whiteColor;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  ul,
+  li,
+  a {
+    color: $whiteColor;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    padding: 30px 0;
+  }
+}
+.horizontal__line {
+  height: 1px;
+  width: 280px;
+  background: white;
+  transform: scaleY(0.2);
+}
+
+.menu__burger__body {
+  .signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 50px;
+    background-color: $buttonBackground;
+    border-radius: 25px;
+
+    &:hover {
+      background-color: $buttonBackgroundHover;
+      cursor: url("./assets/images/icons8-hand-cursor-24.png") 12 0, auto;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .menu__burger__body {
+    min-width: 330px;
+  }
+}
+
+@media (min-width: 430px) {
+  .menu__burger__body {
+    min-width: 428px;
+  }
+}
+@media (min-width: 600px) {
+  .menu__burger__body {
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 700px) {
+  .menu__burger__body {
+    min-width: 596px;
+  }
+}
+
+@media (min-width: 880px) {
+  .menu__burger__body {
+    min-width: 656px;
+    top: $heightHeader;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu__burger__body {
+    display: none;
+  }
+}

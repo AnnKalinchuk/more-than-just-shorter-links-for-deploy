@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.cards__links {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 5px;
+  margin: 0 auto;
+  word-break: break-word;
+}
+
+@media (min-width: 375px) {
+}
+@media (min-width: 1280px) {
+  .cards__links {
+    padding-bottom: 30px;
+  }
+}
